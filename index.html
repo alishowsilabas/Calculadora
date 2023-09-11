@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculadora Simples com JS</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<label>
+			<h2>CALCULADORA SIMPLES</h2>
+			<input id="num-one" name="num-one" type="text" />
+			<br><input id="num-two" name="num-two" type="text" />
+			<br><br>
+			<input checked id="box1" name="sign-area" type="radio" value="add"><b> + </b> 
+			<input id="box2" name="sign-area" type="radio" value="subtract"><b> - </b> 
+			<input id="box3" name="sign-area" type="radio" value="multiply"><b> * </b> 
+			<input id="box4" name="sign-area" type="radio" value="divide"><b> / </b>
+			<br><br><br><br>
+			<button onclick="outcome()" type="button">Calcular</button>
+			<h1 id="resultArea"></h1>
+		</label>
+	</div>
+	<script src="index.js">
+	</script>
+
+</body>
+
+</html>

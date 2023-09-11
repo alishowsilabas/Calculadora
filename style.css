@@ -1,0 +1,44 @@
+body {
+	background: #7395Af;
+}
+.wrapper {
+	width: auto;
+	height: auto;
+	border:10px solid #353434;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #5f6270;
+	padding: 15px;
+	color: #2b2c2c;
+	text-align: center;
+}
+.wrapper h2 {
+	text-transform: uppercase;
+	font-size: x-large;
+	font-family: Courier, Courier, monospace;
+	margin-bottom: 15%;
+}
+input[type="text"] {
+	width: auto;
+	height: auto;
+}
+button {
+	background: #557a95;
+	border: 1px solid black;
+	color: #353434;
+	padding: 10px 25px;
+	font-size: auto;
+	text-transform: uppercase;
+	font-family: Courier, Courier, monospace;;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+input[type="radio"] {
+	width: 20px;
+	height: 20px;
+}
+b {
+	font-size: 30px;
+}
