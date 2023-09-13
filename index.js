@@ -1,16 +1,16 @@
 function outcome(){
-    let numOne = document.getElementById('num-one').value
-    let numTwo = document.getElementById('num-two').value
+    let numOne = Number(document.getElementById('num-one').value)
+    let numTwo = Number(document.getElementById('num-two').value)
     let total = 0
 
-    if(document.getElementById('box1')){
+    if (document.getElementById('add').onclick)
         total = numOne + numTwo
-    } else if (document.getElementById('box2')){
-        total = numOne - numTwo
-    } else if (document.getElementById('box3')){
+    else if (document.getElementById('sub').onclick)
+       total = numOne - numTwo
+    else if (document.getElementById('mult').onclick)
         total = numOne * numTwo
-    } else if (document.getElementById('box4')){
+    else 
         total = numOne / numTwo
-    }
+    document.getElementById('resultArea').innerHTML = 'Result: ' + String(total)
     return total
 }
