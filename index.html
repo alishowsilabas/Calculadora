@@ -7,33 +7,38 @@
 	<title>JS Calculator</title>
 	<link href="style.css" rel="stylesheet">
 </head>
-
 <body>
-	<div class="calculadora">
-			<div class="grid-container">
-				<div class="grid-item">C</div>
-				<div class="grid-item">&#8592;</div>
-				<div class="grid-item">/</div>
-				<div class="grid-item">X</div>
-				<div class="grid-item">7</div>
-				<div class="grid-item">8</div>
-				<div class="grid-item">9</div>
-				<div class="grid-item">-</div>
-				<div class="grid-item">4</div>
-				<div class="grid-item">5</div>
-				<div class="grid-item">6</div>
-				<div class="grid-item">+</div>
-				<div class="grid-item">1</div>
-				<div class="grid-item">2</div>
-				<div class="grid-item">3</div>
-				<div class="grid-item equalButton">=</div>
-				<div class="grid-item zeroButton">0</div>
-				<div class="grid-item">.</div>		
+
+	<div class="calculator">
+		<div class="content">
+			<div class="displayBg">
+				<textarea class="display expressionStyle" id="expression"></textarea>
+				<input class="display resultStyle" id="result">
 			</div>
+			<div class="grid-container">
+				<div class="grid-item" onclick="button(clear())"> C </div>
+				<div class="grid-item"> &#8592; </div>
+				<div class="grid-item" onclick="button(event)">/</div>
+				<div class="grid-item" onclick="button(event)">x</div>
+				<div class="grid-item" onclick="button(event)">7</div>
+				<div class="grid-item" onclick="button(event)">8</div>
+				<div class="grid-item" onclick="button(event)">9</div>
+				<div class="grid-item" onclick="button(event)">-</div>
+				<div class="grid-item" onclick="button(event)">4</div>
+				<div class="grid-item" onclick="button(event)">5</div>
+				<div class="grid-item" onclick="button(event)">6</div>
+				<div class="grid-item" onclick="button(event)">+</div>
+				<div class="grid-item" onclick="button(event)">1</div>
+				<div class="grid-item" onclick="button(event)">2</div>
+				<div class="grid-item" onclick="button(event)">3</div>
+				<div class="grid-item equalButton" onclick="result()">=</div>
+				<div class="grid-item zeroButton" onclick="button(event)">0</div>
+				<div class="grid-item"> . </div>
+			</div>
+		</div>	
 	</div>
-	<script src="index.js">
-	</script>
+
+	<script src="index.js"></script>
 
 </body>
-
 </html>
