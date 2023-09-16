@@ -12,28 +12,28 @@
 	<div class="calculator">
 		<div class="content">
 			<div class="displayBg">
-				<textarea class="display expressionStyle" id="expression"></textarea>
+				<textarea class="display expressionStyle" id="expression">0</textarea>
 				<input class="display resultStyle" id="result">
 			</div>
 			<div class="grid-container">
-				<div class="grid-item cButton" onclick="button(clear())">C</div>
-				<div class="grid-item">&larr;</div>
-				<div class="grid-item" onclick="button(event)">&divide;</div>
-				<div class="grid-item" onclick="button(event)">&times;</div>
-				<div class="grid-item" onclick="button(event)">7</div>
-				<div class="grid-item" onclick="button(event)">8</div>
-				<div class="grid-item" onclick="button(event)">9</div>
-				<div class="grid-item" onclick="button(event)">&minus;</div>
-				<div class="grid-item" onclick="button(event)">4</div>
-				<div class="grid-item" onclick="button(event)">5</div>
-				<div class="grid-item" onclick="button(event)">6</div>
-				<div class="grid-item" onclick="button(event)">&plus;</div>
-				<div class="grid-item" onclick="button(event)">1</div>
-				<div class="grid-item" onclick="button(event)">2</div>
-				<div class="grid-item" onclick="button(event)">3</div>
-				<div class="grid-item equalButton" onclick="result()">&equals;</div>
-				<div class="grid-item zeroButton" onclick="button(event)">0</div>
-				<div class="grid-item">.</div>
+				<div class="grid-item cButton" onclick="action(event)">C</div>
+				<div class="grid-item" onclick="action(event)">&larr;</div>
+				<div class="grid-item" onclick="action(event)">/</div>
+				<div class="grid-item" onclick="action(event)">*</div>
+				<div class="grid-item" onclick="action(event)">7</div>
+				<div class="grid-item" onclick="action(event)">8</div>
+				<div class="grid-item" onclick="action(event)">9</div>
+				<div class="grid-item" onclick="action(event)">-</div>
+				<div class="grid-item" onclick="action(event)">4</div>
+				<div class="grid-item" onclick="action(event)">5</div>
+				<div class="grid-item" onclick="action(event)">6</div>
+				<div class="grid-item" onclick="action(event)">+</div>
+				<div class="grid-item" onclick="action(event)">1</div>
+				<div class="grid-item" onclick="action(event)">2</div>
+				<div class="grid-item" onclick="action(event)">3</div>
+				<div class="grid-item equalButton" onclick="result()">=</div>
+				<div class="grid-item zeroButton" onclick="action(event)">0</div>
+				<div class="grid-item" onclick="action(event)">.</div>
 			</div>
 		</div>	
 	</div>

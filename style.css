@@ -35,6 +35,7 @@ body {
   width: 100%;
   border: none;
   resize: none;
+  outline: none;
   background-color: transparent;
   font-family: 'Major Mono Display', monospace;
 }
@@ -49,6 +50,7 @@ body {
 .resultStyle {
   font-weight: 800;
   font-size: 1.5rem;
+  color: rgb(230, 158, 64);
   text-align: right;
 }
 
@@ -93,7 +95,7 @@ body {
 .content {
   backdrop-filter: blur(var(--blur-value));
   -webkit-backdrop-filter: blur(var(--blur-value));
-  background-image: linear-gradient(320deg, rgba(252, 137, 194, 0.7), rgba(247, 200, 130, 0.7), rgba(208, 245, 148, 0.7));
+  background-image: linear-gradient(320deg, rgba(252, 137, 194, 0.5), rgba(247, 200, 130, 0.5), rgba(208, 245, 148, 0.5));
   width: 326px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;

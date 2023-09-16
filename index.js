@@ -1,44 +1,57 @@
-function outcome() {
-    let numOne = Number(document.getElementById('num-one').value)
-    let numTwo = Number(document.getElementById('num-two').value)
-    let total = 0
+let currentExpression = "";
+let currentResult = "";
 
-    if (document.getElementById('add').onclick)
-        total = numOne + numTwo
-    else if (document.getElementById('sub').onclick)
-       total = numOne - numTwo
-    else if (document.getElementById('mult').onclick)
-        total = numOne * numTwo
-    else 
-        total = numOne / numTwo
-    document.getElementById('resultArea').innerHTML = 'Result: ' + String(total)
-    return total
+function action(event) {
+    const value = event.target.innerHTML;
+    if (currentResult !== "" && "+-*/".includes(value)){
+        currentExpression = currentResult + value;
+    } else if (value === "C"){
+        clear()
+    } else if (value === "←"){
+        backSpace()
+    } else {
+        if (currentExpression === "0" && value !== "."){
+            currentExpression = value;
+        } else {
+            currentExpression += value;
+        }
+    }
+    updateDisplay();
 }
 
-function button(event) {
-    const value = event.target.innerHTML;
-    const expression = document.getElementById("expression");
-    const currentValue = expression.value;
-    const result = document.getElementById("result");
-
-    if (result.value.length > 0) {
-        
-    }
-
-    expression.value = currentValue + value
+function updateDisplay() {
+    const expressionElement = document.getElementById("expression")
+    expressionElement.value = currentExpression
+    document.getElementById("result").value = currentResult
+    const event = new Event("change", {bubbles: true})
+    expressionElement.dispatchEvent(event)
 }
 
 function result() {
-    const expression = document.getElementById("expression").value;
-    const result = document.getElementById("result");
-
-    result.value = eval(expression)
+    try {
+        currentResult = eval(currentExpression)
+        if (Number.isNaN(currentResult)) throw new Error();
+    } catch(error) {
+        currentResult = "error"
+    }
+    updateDisplay()
 }
 
 function clear() {
-    const expression = document.getElementById("expression");
-    const result = document.getElementById("result");
-    
-    expression.value = "";
-    result.value = "";
+    currentExpression = "0"
+    currentResult = ""
+
+    updateDisplay()
+}
+
+function backSpace() {
+    if (currentExpression !== "0"){
+        currentExpression = currentExpression.slice(0, -1)
+    }
+    updateDisplay();
+}
+
+document.getElementById("expression").onchange = function (){
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
 }
