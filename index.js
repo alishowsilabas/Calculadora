@@ -10,8 +10,9 @@ function action(event) {
     } else if (value === "←"){
         backSpace()
     } else {
-        if (currentExpression === "0" && value !== "."){
+        if ((currentExpression === "0" && value !== ".") || currentResult.length !== 0){
             currentExpression = value;
+            currentResult = "";
         } else {
             currentExpression += value;
         }

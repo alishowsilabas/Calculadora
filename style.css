@@ -69,6 +69,7 @@ body {
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  user-select: none;
 }
 
 .grid-item:hover {
@@ -116,4 +117,40 @@ body {
   font-size: 22px;
   color: rgb(16, 17, 17);
   text-align: right;
+}
+
+.minus {
+  font-size: 0;
+}
+
+.minus::before {
+  content: "\2212";
+  font-size: 30px;
+}
+
+.plus {
+  font-size: 0;
+}
+
+.plus::before {
+  content: "\002B";
+  font-size: 30px;
+}
+
+.cross {
+  font-size: 0;
+}
+
+.cross::before {
+  content: "\00D7";
+  font-size: 30px;
+}
+
+.divide {
+  font-size: 0;
+}
+
+.divide::before {
+  content: "\00F7";
+  font-size: 30px;
 }
