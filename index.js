@@ -22,10 +22,10 @@ function action(event) {
 }
 
 function updateDisplay() {
-    const expressionElement = document.getElementById("expression")
+    const expressionElement = document.getElementById("expression");
     expressionElement.value = currentExpression
     document.getElementById("result").value = currentResult
-    const event = new Event("change", {bubbles: true})
+    const event = new Event("change", {bubbles: true});
     expressionElement.dispatchEvent(event);
 }
 
