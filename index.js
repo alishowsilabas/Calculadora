@@ -5,6 +5,7 @@ function action(event) {
     const value = event.target.innerHTML;
     if (currentResult !== "" && "+-*/".includes(value)){
         currentExpression = currentResult + value;
+        currentResult = ""
     } else if (value === "C"){
         clear()
     } else if (value === "←"){
@@ -25,7 +26,7 @@ function updateDisplay() {
     expressionElement.value = currentExpression
     document.getElementById("result").value = currentResult
     const event = new Event("change", {bubbles: true})
-    expressionElement.dispatchEvent(event)
+    expressionElement.dispatchEvent(event);
 }
 
 function result() {
